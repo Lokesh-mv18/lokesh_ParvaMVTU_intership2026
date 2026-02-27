@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   const students = [ { id: 1, name: "Rahul", marks: [80, 75, 90] }, { id: 2, name: "Sneha", marks: [60, 70, 65] }, { id: 3, name: "Arjun", marks: [95, 92, 88] } ];
+
+   function getTotalMarks(marks) {
+  return marks.reduce((total, mark) => total + mark, 0);
+}
+
+students.forEach(student => {
+  const total = getTotalMarks(student.marks);
+  console.log(student.name + " Total Marks: " + total);
+});
+   </script>
+
+  <script>
+    const getAverageAndGrade = (marks) => {
+  const total = marks.reduce((sum, mark) => sum + mark, 0);
+  const average = total / marks.length;
+
+  let grade;
+  if (average >= 90) grade = "A";
+  else if (average >= 75) grade = "B";
+  else if (average >= 60) grade = "C";
+  else grade = "Fail";
+
+  return { average, grade };
+};
+
+students.forEach(student => {
+  const result = getAverageAndGrade(student.marks);
+  console.log(student.name, result);
+});
+
+   </script>
+   <script>
+    const result = students.map(student => {
+  const total = student.marks.reduce((sum, mark) => sum + mark, 0);
+  const average = total / student.marks.length;
+
+  let grade;
+  if (average >= 90) grade = "A";
+  else if (average >= 75) grade = "B";
+  else if (average >= 60) grade = "C";
+  else grade = "Fail";
+
+  return {
+    name: student.name,
+    total: total,
+    average: average,
+    grade: grade
+  };
+});
+
+console.log(result);
+   </script>
+
+   <script>
+    const studentsAbove75 = students.filter(student => {
+  const total = student.marks.reduce((sum, mark) => sum + mark, 0);
+  const average = total / student.marks.length;
+  return average > 75;
+});
+
+console.log(studentsAbove75);
+   </script>
+
+   <script>
+    students.forEach(student => {
+  const total = student.marks.reduce((sum, mark) => sum + mark, 0);
+  const average = (total / student.marks.length).toFixed(2);
+
+  let grade;
+  if (average >= 90) grade = "A";
+  else if (average >= 75) grade = "B";
+  else if (average >= 60) grade = "C";
+  else grade = "Fail";
+
+  console.log(`
+Student ID: ${student.id}
+Name      : ${student.name}
+Marks     : ${student.marks.join(", ")}
+Total     : ${total}
+Average   : ${average}
+Grade     : ${grade}
+----------------------------
+  `);
+});
+   </script>
+   <script>
+    function testScope() {
+  var a = 10;     
+  let b = 20;     
+  const c = 30;   
+
+  if (true) {
+    var a = 100;   
+    let b = 200;    
+    const c = 300; 
+
+    console.log("Inside block:");
+    console.log("a =", a); 
+    console.log("b =", b); 
+    console.log("c =", c); 
+  }
+
+  console.log("Outside block:");
+  console.log("a =", a); 
+  console.log("b =", b); 
+  console.log("c =", c);
+}
+
+testScope();
+   </script>
+   <script>
+    let num1 = 10;   
+let num2 = num1; 
+
+num2 = 50; // Modify num2
+
+console.log("num1:", num1);
+console.log("num2:", num2);
+
+let arr1 = [10, 20, 30]; 
+let arr2 = arr1;         
+
+arr2.push(40); // Modify arr2
+
+console.log("arr1:", arr1); 
+console.log("arr2:", arr2); 
+   </script>
+
+   <script>
+    let original = [1, 2, 3];
+let copy = [...original]; 
+copy.push(4);
+
+console.log("original:", original); 
+console.log("copy:", copy);        
+   </script>
+</body>
+</html>

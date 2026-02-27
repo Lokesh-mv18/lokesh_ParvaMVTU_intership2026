@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array in js</h1>
+    <pre>
+        1 push **
+        2 pop **
+        3 shift
+        4 unshift
+        5 indexof **
+        6 foreach **
+        7 map **
+        8 filter  **
+        9 reduce **
+        10 sort
+        11 find
+        12 splice
+        13 each
+        14 some
+    </pre>
+
+    <script>
+        const arr=[1,2,3,5];
+        console.log("array:",Int16Array)
+
+        //push
+        arr.push(6);
+        console.log("push:",arr);
+
+        //pop
+        const ele=arr.pop();
+        console.log("popped element:",ele);
+        console.log("pop:",arr);
+
+        //shift
+        const ele1 =arr.shift();
+        console.log("shifted elements:",ele);
+        console.log("shift:",arr);
+
+        //unshift
+        arr.unshift(0);
+        console.log("Unshift: ",arr);
+
+        //indexof
+        const index=arr.indexOf(5);
+        console.log("index is: ",index);
+
+        //foreach
+        const arr1=[1,2.3,true,"world",{name: "loki"}];
+        arr1.forEach((ele,index,arr2)=>{
+            console.log("Ele:",ele,"index:",index,"array:",arr2);
+        });
+
+        //map
+        const arr2=[2,4,6,8,10];
+        const arr3=arr2.map((ele)=>{
+            return ele=ele;
+        })
+        console.log("array3:",arr3);
+
+        //filter
+        const arr4=[1,2,3,4,5,6,7,8,9,10];
+        const arr5=arr4.filter((ele)=>{
+            return ele % 2 ==0;
+
+        })
+        console.log("array5:",arr5);
+
+        //reduce
+        
+
+
+    </script>
+</body>
+</html>

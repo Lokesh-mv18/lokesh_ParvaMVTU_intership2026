@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function in JS</h1>
+    <p>1. function decleration</p>
+    <pre>
+        function fun_name(parameters){
+
+        }
+        fun_name(args);
+    </pre>
+    <p>2 .function expression</p>
+    <pre>
+        const fun_name = function(parameters){
+
+        }
+        fun_name(args);
+  <p>3 .Arrow function</p>
+    <pre>
+        const fun_name = (parameters) => {
+
+        }
+        fun_name(args);
+    </pre>
+    <script>
+        const add=function(a,b){
+            return a+b;
+        }
+        const res=add(10,20);
+        console.log("add: ",res);
+
+        const sub=function (a,b) {
+            console.log("sub: ",(a-b));
+        }
+        sub(20,30);
+
+        const mul= function (){
+            return 10 *30;
+        }
+        const res1=mul();
+        console.log("mul:",res1);
+
+        const div=function(){
+            console.log("div:",10/2);
+        }
+        div();
+    </script>
+
+    <script>
+          const add1=function(a,b){
+            return a+b;
+        }
+        const res2=add1(10,20);
+        console.log("add: ",res);
+
+        const sub3=function (a,b) {
+            console.log("sub3: ",(a-b));
+        }
+        sub(20,30);
+
+        const mul1= function (){
+            return 10 *30;
+        }
+        const res4=mul();
+        console.log("mul:",res1);
+
+        const div1=function(){
+            console.log("div:",10/2);
+        }
+        div();
+        
+    </script>
+    <script>
+        const add5=(a,b)=>{
+            return a+b;
+        }
+
+        const res5=add(40,60);
+        console.log("add:",res5);
+    </script>
+
+</body>
+</html>

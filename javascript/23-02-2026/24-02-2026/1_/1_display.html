@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>display methods</h1>
+    <p>1. innertext</p>
+    <p>2. innerhtml</p>
+
+    <div id="container">
+
+    </div>
+    <button id="innertextbtn">innertext</button>
+    <button id="innerhtmlbtn">innerhtml</button>
+
+    <script>
+        const innertextbtn=document.getElementById('innertextbtn');
+          const innerhtmlbtn=document.getElementById('innerhtmlbtn');
+            const container=document.getElementById('container');
+
+            innertextbtn.addEventListener('click',() => {
+                container.innertext="<h1>this is innertext</h1>";
+
+            });
+            innerhtmlbtn.addEventListener('click', () => {
+                container.innerhtml="<h1>this is innerhtml</h1>";
+            });
+
+    </script>
+</body>
+</html>

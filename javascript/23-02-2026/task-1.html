@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+</head>
+<body>
+
+    <h2>Student Form</h2>
+
+    <form onsubmit="showData(event)">
+        Name: <input type="text" id="name"><br><br>
+        Email: <input type="email" id="email"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function showData(event) {
+            event.preventDefault();  // stop refresh
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+
+            console.log("Name: " + name);
+            console.log("Email: " + email);
+        }
+    </script>
+
+</body>
+</html>

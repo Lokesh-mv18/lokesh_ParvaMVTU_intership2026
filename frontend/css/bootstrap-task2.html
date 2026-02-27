@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Bootstrap Project</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+.hero{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://via.placeholder.com/1400x500');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.footer{
+    background:#212529;
+    color:white;
+    padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#">Bootstrap Demo</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#components">Components</a></li>
+<li class="nav-item"><a class="nav-link" href="#form">Form</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+<div class="container">
+<h1 class="display-4 fw-bold">Complete Bootstrap Website</h1>
+<p class="lead">All Major Components in One Page</p>
+<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#myModal">
+Launch Modal
+</button>
+</div>
+</section>
+
+<!-- Alert -->
+<div class="container mt-4">
+<div class="alert alert-success alert-dismissible fade show">
+Welcome! This is a success alert.
+<button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+</div>
+
+<!-- Grid & Cards -->
+<section class="py-5" id="components">
+<div class="container">
+<h2 class="text-center mb-4">Cards & Grid</h2>
+
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card shadow">
+<img src="https://via.placeholder.com/300x200" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Card 1 <span class="badge bg-success">New</span></h5>
+<p class="card-text">Example card using Bootstrap.</p>
+<button class="btn btn-primary">Read More</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="https://via.placeholder.com/300x200" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Card 2</h5>
+<p class="card-text">Responsive grid layout.</p>
+<button class="btn btn-success">Details</button>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="https://via.placeholder.com/300x200" class="card-img-top">
+<div class="card-body text-center">
+<h5 class="card-title">Card 3</h5>
+<p class="card-text">Modern UI design.</p>
+<button class="btn btn-danger">Explore</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Table -->
+<div class="container py-5">
+<h2 class="text-center mb-4">Table</h2>
+<table class="table table-striped table-bordered text-center">
+<thead class="table-dark">
+<tr>
+<th>Name</th>
+<th>Course</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lokesh</td>
+<td>Java</td>
+<td>90</td>
+</tr>
+<tr>
+<td>Rahul</td>
+<td>Web</td>
+<td>85</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- Progress Bar -->
+<div class="container py-4">
+<h4>Skill Progress</h4>
+<div class="progress mb-3">
+<div class="progress-bar bg-success" style="width: 80%">HTML 80%</div>
+</div>
+<div class="progress">
+<div class="progress-bar bg-info" style="width: 70%">CSS 70%</div>
+</div>
+</div>
+
+<!-- Accordion -->
+<div class="container py-5">
+<h2 class="text-center mb-4">Accordion</h2>
+<div class="accordion" id="accordionExample">
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+What is Bootstrap?
+</button>
+</h2>
+<div id="collapseOne" class="accordion-collapse collapse show">
+<div class="accordion-body">
+Bootstrap is a CSS framework for responsive design.
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+Why use Bootstrap?
+</button>
+</h2>
+<div id="collapseTwo" class="accordion-collapse collapse">
+<div class="accordion-body">
+It saves development time and makes design responsive.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- Carousel -->
+<div class="container py-5">
+<h2 class="text-center mb-4">Carousel</h2>
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="https://via.placeholder.com/800x300" class="d-block w-100">
+</div>
+<div class="carousel-item">
+<img src="https://via.placeholder.com/800x300/ff0000" class="d-block w-100">
+</div>
+</div>
+</div>
+</div>
+
+<!-- Form -->
+<section class="py-5 bg-light" id="form">
+<div class="container">
+<h2 class="text-center mb-4">Contact Form</h2>
+<div class="row justify-content-center">
+<div class="col-md-6">
+<form>
+<div class="mb-3">
+<label class="form-label">Name</label>
+<input type="text" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" class="form-control">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Message</label>
+<textarea class="form-control"></textarea>
+</div>
+
+<button class="btn btn-primary w-100">Submit</button>
+</form>
+
+<nav class="mt-4">
+<ul class="pagination justify-content-center">
+<li class="page-item"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+</ul>
+</nav>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">Bootstrap Modal</h5>
+<button class="btn-close" data-bs-dismiss="modal"></button>
+</div>
+<div class="modal-body">
+This is a modal popup example.
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="footer text-center">
+<p>© 2026 Complete Bootstrap Project</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
